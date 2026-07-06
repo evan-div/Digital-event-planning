@@ -1,0 +1,125 @@
+Digital Event Planning — Rank Math / Head Tag Reference
+======================================================================
+ITE uses Rank Math (not Yoast). Place each item in the tab indicated.
+Canonical is auto-set from the page URL (https://intheevent.com/event-planning/digital-events/) — do not add manually.
+
+── RANK MATH › GENERAL TAB ──────────────────────────────────────────
+
+Title:
+Digital Event Planning Salt Lake City, Utah | Recording, Live Streaming & Photography | In The Event
+
+Meta Description:
+Digital and hybrid event production in Salt Lake City, Utah. In-studio recording, live streaming, photography, and set rentals, all from one team. Get a quote today.
+
+── RANK MATH › SOCIAL TAB ───────────────────────────────────────────
+
+OG Title:
+Digital Event Planning Salt Lake City, Utah | In The Event
+
+OG Description:
+In-studio recording, live streaming, photography, and set rentals for digital and hybrid events in Salt Lake City, Utah.
+
+OG Type: website
+
+OG URL: https://intheevent.com/event-planning/digital-events/
+
+OG Image: https://intheevent.com/wp-content/uploads/2022/10/digital-meeting-recordings.webp
+
+── RANK MATH › SCHEMA TAB › ADD SCHEMA › CUSTOM SCHEMA ─────────────
+
+Paste the JSON-LD below (Service schema plus the FAQPage schema matching the
+on-page FAQ accordion, combined in one @graph so both go in a single Custom
+Schema entry):
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Digital Event Planning",
+      "serviceType": "Digital and Hybrid Event Production",
+      "url": "https://intheevent.com/event-planning/digital-events/",
+      "description": "In-studio recording, live streaming, photography, and set rentals for digital and hybrid events.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "In The Event",
+        "telephone": "+1-801-886-1144",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3008 South 300 West",
+          "addressLocality": "Salt Lake City",
+          "addressRegion": "UT",
+          "postalCode": "84115",
+          "addressCountry": "US"
+        }
+      },
+      "areaServed": ["Salt Lake City, UT", "Murray, UT", "Park City, UT", "Provo, UT", "Ogden, UT", "Utah County, UT"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What digital event production services does In The Event offer in Salt Lake City?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We offer in-studio recording, full live streaming production, photography, and a rental inventory of sets, furniture, and decor, all from our Salt Lake City studio." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you stream to multiple platforms at once?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our A/V technicians are experienced broadcasting across all major live streaming platforms and can manage multi-camera streams to more than one destination at a time." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to use your studio, or can you stream from our venue?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Either works. We can produce your livestream in our studio or bring our production team and equipment to your venue." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you record our keynote or breakout speakers ahead of the event?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Recording sessions in advance is a popular option for digital and hybrid events, and it gives you room for retakes and extra editing polish before the event airs." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I only need photography, not video?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Our photography studio is available on its own for product photos, headshots, or portraits, with the same access to backdrops, props, and lighting." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve clients outside Salt Lake City?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We produce digital and hybrid events throughout Utah, including Murray, Park City, Provo, Ogden, and the greater Wasatch Front." }
+        }
+      ]
+    }
+  ]
+}
+
+── IMAGES ───────────────────────────────────────────────────────────
+
+All image URLs already point to files live in the WordPress media library
+(wp-content/uploads/...) — these are the same photos already used on the
+current Digital Events page and elsewhere on the site, so no new uploads
+should be required. Spot-check each URL still resolves before publishing,
+in case any of these were since renamed or removed from the media library:
+
+- https://intheevent.com/wp-content/uploads/2022/11/Optimized-IMG_4672-1024x683.jpg
+- https://intheevent.com/wp-content/uploads/2022/11/Optimized-9U6A0819-1024x576.jpg
+- https://intheevent.com/wp-content/uploads/2023/03/IMG_1979-1024x576.jpg
+- https://intheevent.com/wp-content/uploads/2022/09/Halloweenv2-1083x1536.jpg
+- https://intheevent.com/wp-content/uploads/2022/10/digital-meeting-recordings.webp
+
+── NOTES ─────────────────────────────────────────────────────────────
+
+- The Code Block content lives in digital-events-oxygen.php. Paste the
+  entire file contents into the Oxygen Code Block on this page.
+- Site header, primary nav, and footer are not included in the code block;
+  they come from the theme as on every other page.
+- CSS is scoped under the .ite-de wrapper class (matching the .ite-cs
+  convention already used on case study pages) so it won't bleed into the
+  rest of the site. #ite-scroll-progress and #cta-section/#cta-overlay are
+  the only IDs used; renamed with an ite- prefix where there's any risk of
+  colliding with another block on the same page.
+- AvantGarde-Medium (500) and AvantGarde-Bold (700) are embedded directly
+  in the <style> block as base64 WOFF2, so no external font requests are
+  made. The Book/Demi weights are not included: those files are known to
+  fail CFF parsing in the browser (confirmed by testing), so body copy and
+  the few 600-weight labels nearest-weight-match to Medium/Bold instead.
