@@ -161,8 +161,8 @@
 /* ── SPLIT SECTIONS ── */
 
 .ite-de .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.ite-de .split-grid.flip { direction: rtl; }
-.ite-de .split-grid.flip > * { direction: ltr; }
+.ite-de .split-grid.flip .split-text { order: 2; }
+.ite-de .split-grid.flip .split-fig { order: 1; }
 
 .ite-de .split-fig-inner { aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; }
 .ite-de .split-fig-inner img {
@@ -265,7 +265,7 @@
 
 @media (max-width: 900px) {
   .ite-de .split-grid { grid-template-columns: 1fr; gap: 32px; }
-  .ite-de .split-grid.flip { direction: ltr; }
+  .ite-de .split-grid.flip .split-text, .ite-de .split-grid.flip .split-fig { order: initial; }
 }
 
 @media (max-width: 640px) {
@@ -353,17 +353,7 @@
 ════════════════════════════════════════ -->
 <section class="section">
   <div class="container">
-    <div class="split-grid flip">
-      <figure class="split-fig reveal">
-        <div class="split-fig-inner">
-          <img src="https://intheevent.com/wp-content/uploads/2022/11/Optimized-9U6A0819-1024x576.jpg"
-               alt="Wide conference stage setup with a branded backdrop, projection screens, and rows of chairs arranged for attendees." />
-        </div>
-        <figcaption>
-          <strong>Live Production</strong>
-          <span>Multi-camera livestream setup</span>
-        </figcaption>
-      </figure>
+    <div class="split-grid">
       <div class="split-text reveal">
         <h2>Live Streaming</h2>
         <p>In The Event offers full live streaming production from our Salt Lake City studio. Design your stream with professional stage sets and customizable backdrops. Our A/V technicians are experienced broadcasters across all major live streaming platforms and are onsite to keep every stream running smoothly, whether you use our studio or your own venue. Services include multi-camera angles, sound balancing, and complete video and stream management.</p>
@@ -374,6 +364,16 @@
           <li>On-site or in-studio support</li>
         </ul>
       </div>
+      <figure class="split-fig reveal">
+        <div class="split-fig-inner">
+          <img src="https://intheevent.com/wp-content/uploads/2022/11/Optimized-9U6A0819-1024x576.jpg"
+               alt="Wide conference stage setup with a branded backdrop, projection screens, and rows of chairs arranged for attendees." />
+        </div>
+        <figcaption>
+          <strong>Live Production</strong>
+          <span>Multi-camera livestream setup</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -383,7 +383,7 @@
 ════════════════════════════════════════ -->
 <section class="section section-navy">
   <div class="container">
-    <div class="split-grid">
+    <div class="split-grid flip">
       <div class="split-text reveal">
         <h2>Photography</h2>
         <p>Book our photography studio for product photos, business headshots, or senior portraits. Enjoy private studio time and access to a wide inventory of backdrops, props, and lighting. Our technicians help with set changes to maximize your time in studio, or work with our design team to build a set from scratch.</p>
@@ -413,17 +413,7 @@
 ════════════════════════════════════════ -->
 <section class="section">
   <div class="container">
-    <div class="split-grid flip">
-      <figure class="split-fig reveal">
-        <div class="split-fig-inner">
-          <img src="https://intheevent.com/wp-content/uploads/2022/09/Halloweenv2-1083x1536.jpg"
-               alt="Dozens of glowing candles suspended in mid-air against a dark starry backdrop, creating an enchanting floating effect." />
-        </div>
-        <figcaption>
-          <strong>Set &amp; Decor</strong>
-          <span>Custom studio set, In The Event</span>
-        </figcaption>
-      </figure>
+    <div class="split-grid">
       <div class="split-text reveal">
         <h2>Set, Decor &amp; Furniture</h2>
         <p>As with every In The Event experience, your time in studio is completely customizable. Choose from our inventory of on-trend furniture, props, and decor. Display items like clothing racks and mannequins are available, along with custom printed or branded backdrops. Schedule a pre-shoot consultation with our design team to build a set that works for you.</p>
@@ -434,6 +424,16 @@
           <li>Pre-shoot design consultations</li>
         </ul>
       </div>
+      <figure class="split-fig reveal">
+        <div class="split-fig-inner">
+          <img src="https://intheevent.com/wp-content/uploads/2022/09/Halloweenv2-1083x1536.jpg"
+               alt="Dozens of glowing candles suspended in mid-air against a dark starry backdrop, creating an enchanting floating effect." />
+        </div>
+        <figcaption>
+          <strong>Set &amp; Decor</strong>
+          <span>Custom studio set, In The Event</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>

@@ -194,8 +194,8 @@ img { display: block; width: 100%; }
 /* ── SPLIT SECTIONS ── */
 
 .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.split-grid.flip { direction: rtl; }
-.split-grid.flip > * { direction: ltr; }
+.split-grid.flip .split-text { order: 2; }
+.split-grid.flip .split-fig { order: 1; }
 
 .split-fig-inner { aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; }
 .split-fig-inner img {
@@ -330,7 +330,7 @@ figcaption span { font-size: 13px; color: var(--grey); }
   .header-phone { display: none; }
 
   .split-grid { grid-template-columns: 1fr; gap: 32px; }
-  .split-grid.flip { direction: ltr; }
+  .split-grid.flip .split-text, .split-grid.flip .split-fig { order: initial; }
 
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
