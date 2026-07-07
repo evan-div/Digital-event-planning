@@ -232,13 +232,6 @@ figcaption span { font-size: 13px; color: var(--grey); }
   width: 6px; height: 6px; border-radius: 50%; background: var(--green);
 }
 
-/* ── FEATURED IMAGE ── */
-
-.featured-image { width: 100%; aspect-ratio: 21/9; overflow: hidden; }
-.featured-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
-@media (max-width: 900px) { .featured-image { aspect-ratio: 16/6; } }
-@media (max-width: 640px) { .featured-image { aspect-ratio: 16/7; } }
-
 /* ── RENTALS BANNER ── */
 
 .banner { padding: 64px 0; text-align: center; }

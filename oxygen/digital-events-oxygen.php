@@ -199,13 +199,6 @@
   width: 6px; height: 6px; border-radius: 50%; background: var(--green);
 }
 
-/* ── FEATURED IMAGE ── */
-
-.ite-de .featured-image { width: 100%; aspect-ratio: 21/9; overflow: hidden; }
-.ite-de .featured-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
-@media (max-width: 900px) { .ite-de .featured-image { aspect-ratio: 16/6; } }
-@media (max-width: 640px) { .ite-de .featured-image { aspect-ratio: 16/7; } }
-
 /* ── RENTALS BANNER ── */
 
 .ite-de .banner { padding: 64px 0 !important; text-align: center; }
@@ -458,13 +451,6 @@
     </div>
   </div>
 </section>
-
-<!-- ════════════════════════════════════════
-     FEATURED IMAGE
-════════════════════════════════════════ -->
-<div class="featured-image">
-  <img src="https://intheevent.com/wp-content/uploads/2022/10/digital-meeting-recordings.webp" alt="Person participating in a video conference with multiple colleagues displayed in a grid view on a laptop screen." />
-</div>
 
 <!-- ════════════════════════════════════════
      RENTALS BANNER
